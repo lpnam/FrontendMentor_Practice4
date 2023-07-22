@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="success_container">
+        <div class="thank_c">
+            <img src="/assets/images/icon-success.svg" alt="success icon">
+            <h1 class="success_c">
+                Thanks for subscribing!
+            </h1>
+            <p class="success_p">
+                A confirmation email has been sent to <span class="email_sub"></span>. 
+                Please open it and click the button inside to confirm your subscription.
+            </p>
+        </div>
+        <a class="button_sub dismiss" href="index.html"> Dismiss message</a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const a = localStorage.getItem('email');
+          document.querySelector('.email_sub').textContent = a;
+          localStorage.clear();
+        });
+    </script>
+</body>
+</html>
